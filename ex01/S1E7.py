@@ -31,9 +31,11 @@ class Lannister(Character):
         self.is_alive = False
 
     def __str__(self):
+        """a custom __str__ value"""
         return f'Vector: {self.__dict__.values()}>'
 
     def __repr__(self) -> str:
+        """a custom __repr__ value"""
         return f'Vector: {self.family_name, self.eyes, self.hairs}'
 
     @classmethod
