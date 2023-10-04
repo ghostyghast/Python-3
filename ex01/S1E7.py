@@ -34,7 +34,8 @@ class Lannister(Character):
     def __repr__(self) -> str:
         return f'Vector: {self.family_name, self.eyes, self.hairs}'
 
-    def create_lannister(name, state=True):
+    @classmethod
+    def create_lannister(cls, name, state=True):
         """create_lannister(string name, optional state) -> lannister class
         lannister method that returns new lannister class object"""
-        return Lannister(name, state)
+        return cls(name, state)
