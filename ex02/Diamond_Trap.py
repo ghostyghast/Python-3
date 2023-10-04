@@ -4,9 +4,10 @@ from S1E7 import Baratheon, Lannister
 class King(Baratheon, Lannister):
     """King class"""
     def __init__(self, name, state=True):
-        self.name, self.family_name = name, 'Baratheon'
-        self.eyes, self.hairs = 'brown', 'dark'
-        self.is_alive = state
+        """The king class, inherits from both baratheon and lannister.
+        It then inherits the init from the first class it inhereits :
+        Baratheon"""
+        super().__init__(name, state)
 
     def set_eyes(self, color):
         """set eye color"""
